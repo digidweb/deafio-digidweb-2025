@@ -1,7 +1,8 @@
 {
   "name": "abrigo-animais",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sistema de adoção de animais do abrigo",
+  "main": "src/abrigo-animais.js",
   "type": "module",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
