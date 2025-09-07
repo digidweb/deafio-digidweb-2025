@@ -7,7 +7,7 @@ Sistema para organizar adoções de animais baseado em compatibilidade de brinqu
 ```
 projeto/
 ├── src/
-│   ├── abrigo-animais.js    # Classe principal (seu código)
+│   ├── abrigo-animais.js    # Classe principal 
 │   ├── exemplo.js           # Exemplos de uso
 │   └── teste.js            # Testes simples
 ├── package.json            # Configuração do Node.js
