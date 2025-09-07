@@ -1,3 +1,151 @@
+# 🏠 Abrigo de Animais - Sistema de Adoção
+
+Sistema para organizar adoções de animais baseado em compatibilidade de brinquedos.
+
+## 📁 Estrutura do Projeto
+
+```
+projeto/
+├── src/
+│   ├── abrigo-animais.js    # Classe principal (seu código)
+│   ├── exemplo.js           # Exemplos de uso
+│   └── teste.js            # Testes simples
+├── package.json            # Configuração do Node.js
+└── README.md              # Este arquivo
+```
+
+## 🚀 Como Rodar
+
+### Opção 1: Node.js (Recomendado)
+
+1. **Instale o Node.js** (versão 14+ recomendada)
+   - Download: https://nodejs.org/
+
+2. **Crie a estrutura de pastas:**
+   ```bash
+   mkdir abrigo-animais
+   cd abrigo-animais
+   mkdir src
+   ```
+
+3. **Salve os arquivos:**
+   - `package.json` na raiz
+   - `src/abrigo-animais.js` (código principal)
+   - `src/exemplo.js` (exemplos)
+   - `src/teste.js` (testes)
+
+4. **Execute os exemplos:**
+   ```bash
+   npm start
+   ```
+
+5. **Execute os testes:**
+   ```bash
+   npm test
+   ```
+
+### Opção 2: Navegador (HTML)
+
+Crie um arquivo `index.html`:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Abrigo Animais</title>
+</head>
+<body>
+    <h1>Abrigo de Animais</h1>
+    <div id="resultado"></div>
+    
+    <script type="module">
+        import { AbrigoAnimais } from './src/abrigo-animais.js';
+        
+        const abrigo = new AbrigoAnimais();
+        const resultado = abrigo.encontraPessoas('RATO,BOLA', 'RATO,NOVELO', 'Rex,Fofo');
+        
+        document.getElementById('resultado').innerHTML = 
+            '<pre>' + JSON.stringify(resultado, null, 2) + '</pre>';
+    </script>
+</body>
+</html>
+```
+
+### Opção 3: Console do Navegador
+
+1. Abra o navegador (F12)
+2. Vá para Console
+3. Cole o código da classe `AbrigoAnimais`
+4. Execute:
+```javascript
+const abrigo = new AbrigoAnimais();
+console.log(abrigo.encontraPessoas('RATO,BOLA', 'RATO,NOVELO', 'Rex,Fofo'));
+```
+
+## 📋 Exemplos de Uso
+
+### Caso Válido (do desafio)
+```javascript
+const resultado = abrigo.encontraPessoas('RATO,BOLA', 'RATO,NOVELO', 'Rex,Fofo');
+// { lista: ['Fofo - abrigo', 'Rex - pessoa 1'] }
+```
+
+### Caso Inválido (do desafio)
+```javascript
+const resultado = abrigo.encontraPessoas('CAIXA,RATO', 'RATO,BOLA', 'Lulu');
+// { erro: 'Animal inválido' }
+```
+
+## 🧪 Executando Testes
+
+Os testes verificam:
+- ✅ Casos válidos e inválidos
+- ✅ Validação de animais e brinquedos
+- ✅ Regras de adoção
+- ✅ Ordem alfabética dos resultados
+- ✅ Casos especiais (Loco, gatos, etc.)
+
+Execute: `npm test`
+
+## 🎯 Animais Disponíveis
+
+| Nome | Tipo | Brinquedos Favoritos |
+|------|------|---------------------|
+| Rex | cão | RATO, BOLA |
+| Mimi | gato | BOLA, LASER |
+| Fofo | gato | BOLA, RATO, LASER |
+| Zero | gato | RATO, BOLA |
+| Bola | cão | CAIXA, NOVELO |
+| Bebe | cão | LASER, RATO, BOLA |
+| Loco | jabuti | SKATE, RATO |
+
+## 🎮 Brinquedos Válidos
+`RATO`, `BOLA`, `LASER`, `CAIXA`, `NOVELO`, `SKATE`
+
+## 📜 Regras de Adoção
+
+1. Animal vai para quem tem todos os brinquedos na ordem desejada
+2. Pode intercalar outros brinquedos, mas ordem deve ser mantida
+3. Gatos não dividem brinquedos
+4. Se ambas pessoas podem adotar, animal fica no abrigo
+5. Máximo 3 animais por pessoa
+6. Loco não se importa com ordem se tiver companhia
+
+## 🛠️ Desenvolvimento
+
+Para modificar o código, edite `src/abrigo-animais.js` e execute os testes para verificar se tudo funciona:
+
+```bash
+npm test
+```
+
+
+
+
+
+
+
+
+
 # ABRIGO DE ANIMAIS
 
 ## COMO BAIXAR O CÓDIGO E SUBMETER MINHA SOLUÇÃO?
