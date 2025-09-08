@@ -20,7 +20,7 @@ Sistema para organizar adoções de animais baseado em compatibilidade de brinqu
    - `package.json` na raiz
    - `src/abrigo-animais.js` (código principal)
    - `src/exemplo.js` (exemplos)
-   - `src/teste.js` (testes)
+   - `src/abrigo-animais.test.js` (testes)
 
 4. **Execute os exemplos:**
    ```bash
