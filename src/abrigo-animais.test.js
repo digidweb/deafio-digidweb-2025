@@ -57,9 +57,9 @@ describe("Casos adicionais do desafio", () => {
     const res = new AbrigoAnimais().encontraPessoas(
       "RATO,OUTRO,SKATE", // ordem diferente, mas Loco não liga se houver companhia
       "BOLA",
-      "CAIXA",
       "Loco,Mimi" // Mimi (gato) = companhia
     );
+    console.log(res.erro);
     expect(res.erro).toBeFalsy();
     // Ordenado alfabeticamente
     expect(res.lista).toContain("Loco - pessoa 1");
