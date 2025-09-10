@@ -41,12 +41,12 @@ Sistema para organizar adoções de animais baseado em compatibilidade de brinqu
 **Método 2: Serve (Node.js)**
 
 Instale o servidor Node via terminal na pasta raiz do projeto
-```bash
-cd abrigo-animais
-npm install -g serve
-serve .
-# Abre automaticamente no navegador
-```
+   ```bash
+   cd abrigo-animais
+   npm install -g serve
+   serve .
+   # Abre automaticamente no navegador
+   ```
 
 Em ambos os métodos, acesse pela URL http://127.0.0.1:8000 no seu navegador
 
@@ -62,26 +62,26 @@ Em ambos os métodos, acesse pela URL http://127.0.0.1:8000 no seu navegador
 4. Cole o código da classe `AbrigoAnimais`
 5. Apague a última linha `export { AbrigoAnimais as AbrigoAnimais };`
 6. Copie e cole o segunte código ao final:
-```javascript
-const abrigo = new AbrigoAnimais();
-console.log(abrigo.encontraPessoas('RATO,BOLA', 'RATO,NOVELO', 'Rex,Fofo'));
-```
+   ```javascript
+   const abrigo = new AbrigoAnimais();
+   console.log(abrigo.encontraPessoas('RATO,BOLA', 'RATO,NOVELO', 'Rex,Fofo'));
+   ```
 7. Clique em "Executar"
 
 
 **📋 Exemplos de Uso**
 
 - Caso Válido (do desafio)
-```javascript
-const resultado = abrigo.encontraPessoas('RATO,BOLA', 'RATO,NOVELO', 'Rex,Fofo');
-// { lista: ['Fofo - abrigo', 'Rex - pessoa 1'] }
-```
+   ```javascript
+   const resultado = abrigo.encontraPessoas('RATO,BOLA', 'RATO,NOVELO', 'Rex,Fofo');
+   // { lista: ['Fofo - abrigo', 'Rex - pessoa 1'] }
+   ```
 
 - Caso Inválido (do desafio)
-```javascript
-const resultado = abrigo.encontraPessoas('CAIXA,RATO', 'RATO,BOLA', 'Lulu');
-// { erro: 'Animal inválido' }
-```
+   ```javascript
+   const resultado = abrigo.encontraPessoas('CAIXA,RATO', 'RATO,BOLA', 'Lulu');
+   // { erro: 'Animal inválido' }
+   ```
 
 
 ### Opção 3: Terminal
@@ -112,17 +112,19 @@ Os testes verificam:
 - ✅ Ordem alfabética dos resultados
 - ✅ Casos especiais (Loco, gatos, etc.)
 
-Execute: `npm test`
-
+Execute:                           
+   ```bash
+   npm test
+   ```
 
 
 ## 🛠️ Desenvolvimento
 
 Para modificar o código, edite `src/abrigo-animais.js` e execute os testes para verificar se tudo funciona:
 
-```bash
-npm test
-```
+   ```bash
+   npm test
+   ```
 
 -------------------------------------------------------------------
 (O desafio)
