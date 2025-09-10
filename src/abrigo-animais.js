@@ -197,8 +197,13 @@ class AbrigoAnimais {
 
     // Regra 6: Loco não se importa com ordem se tiver companhia
     if (nomeAnimal === "Loco") {
-      // Companhia: qualquer outro animal listado
-      const temCompanhia = todosAnimais.some((nome) => nome !== "Loco");
+      // Verificar se há outros animais não-gato na lista (companhia válida)
+      const temCompanhia = todosAnimais.some((nome) => {
+        if (nome === "Loco") return false;
+        const outroAnimal = this.animais[nome];
+        return outroAnimal && outroAnimal.tipo !== "gato";
+      });
+
       if (temCompanhia) {
         // Loco só precisa que a pessoa tenha seus brinquedos, independente da ordem
         return animal.brinquedos.every((brinquedo) =>
