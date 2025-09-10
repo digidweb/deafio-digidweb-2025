@@ -71,4 +71,60 @@ const resultado5 = abrigo.encontraPessoas(
 console.log("Resultado:", JSON.stringify(resultado5, null, 2));
 console.log("\n" + "=".repeat(50) + "\n");
 
-console.log("✅ Exemplos executados com sucesso!");
+// Exemplo 6: Animal duplicado
+console.log("📋 Exemplo 6 - Animal Duplicado:");
+console.log("Pessoa 1: RATO,BOLA");
+console.log("Pessoa 2: LASER,CAIXA");
+console.log("Animais: Rex,Mimi,Rex"); // Rex aparece duas vezes
+
+const resultado6 = abrigo.encontraPessoas(
+  "RATO,BOLA",
+  "LASER,CAIXA",
+  "Rex,Mimi,Rex"
+);
+console.log("Resultado:", JSON.stringify(resultado6, null, 2));
+console.log("\n" + "=".repeat(50) + "\n");
+
+// Exemplo 7: Brinquedo duplicado na Pessoa 1
+console.log("📋 Exemplo 7 - Brinquedo Duplicado (Pessoa 1):");
+console.log("Pessoa 1: RATO,BOLA,RATO"); // RATO aparece duas vezes
+console.log("Pessoa 2: LASER,CAIXA");
+console.log("Animais: Rex,Mimi");
+
+const resultado7 = abrigo.encontraPessoas(
+  "RATO,BOLA,RATO",
+  "LASER,CAIXA",
+  "Rex,Mimi"
+);
+console.log("Resultado:", JSON.stringify(resultado7, null, 2));
+console.log("\n" + "=".repeat(50) + "\n");
+
+// Exemplo 8: Brinquedo duplicado na Pessoa 2
+console.log("📋 Exemplo 8 - Brinquedo Duplicado (Pessoa 2):");
+console.log("Pessoa 1: RATO,BOLA");
+console.log("Pessoa 2: LASER,LASER,CAIXA"); // LASER aparece duas vezes
+console.log("Animais: Rex");
+
+const resultado8 = abrigo.encontraPessoas(
+  "RATO,BOLA",
+  "LASER,LASER,CAIXA",
+  "Rex"
+);
+console.log("Resultado:", JSON.stringify(resultado8, null, 2));
+console.log("\n" + "=".repeat(50) + "\n");
+
+// Exemplo 9: Múltiplos animais duplicados
+console.log("📋 Exemplo 9 - Múltiplos Animais Duplicados:");
+console.log("Pessoa 1: RATO,BOLA");
+console.log("Pessoa 2: LASER");
+console.log("Animais: Fofo,Zero,Mimi,Fofo,Zero"); // Fofo e Zero aparecem duas vezes
+
+const resultado9 = abrigo.encontraPessoas(
+  "RATO,BOLA",
+  "LASER",
+  "Fofo,Zero,Mimi,Fofo,Zero"
+);
+console.log("Resultado:", JSON.stringify(resultado9, null, 2));
+console.log("\n" + "=".repeat(50) + "\n");
+
+console.log("✅ Todos os exemplos executados com sucesso!");
