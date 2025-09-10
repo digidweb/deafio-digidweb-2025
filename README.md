@@ -2,11 +2,9 @@
 
 Sistema para organizar adoções de animais baseado em compatibilidade de brinquedos.
 
-## 🚀 Como Rodar
+## :computer: Instalação
 
-### Opção 1: Node.js (Recomendado)
-
-1. **Instale o Node.js** (versão 14+ recomendada)
+1. **Instale o Node.js:** (versão 14+ recomendada)
    - Download: https://nodejs.org/
 
 2. **Crie a estrutura de pastas via terminal:**
@@ -27,16 +25,33 @@ Sistema para organizar adoções de animais baseado em compatibilidade de brinqu
    - `src/abrigo-animais.js` (código principal)
    - `src/exemplo.js` (exemplos)
    - `src/abrigo-animais.test.js` (testes)
+  
 
-5. **Execute os exemplos:**
-   ```bash
-   npm start
-   ```
+## 🚀 Como Rodar
 
-6. **Execute os testes:**
-   ```bash
-   npm test
-   ```
+### Opção 1: Navegador (Front-end)
+
+**Método 1: Live Server (VS Code)**
+
+1. Abra a pasta do projeto com o editor VSCode
+2. Instale extensão "Live Server"
+3. Clique com o botão direito no arquivo `index.html`
+4. Clique em "Open with Live Server"
+
+**Método 2: Serve (Node.js)**
+
+Instale o servidor Node via terminal na pasta raiz do projeto
+```bash
+cd abrigo-animais
+npm install -g serve
+serve .
+# Abre automaticamente no navegador
+```
+
+Em ambos os métodos, acesse pela URL http://127.0.0.1:8000 no seu navegador
+
+<img width="1479" height="1036" alt="frontEnd-abrigoAnimais" src="https://github.com/user-attachments/assets/d00551d4-85f2-4afa-a9fd-0717bffae90a" />
+
 
 
 ### Opção 2: Console do Navegador
@@ -54,7 +69,7 @@ console.log(abrigo.encontraPessoas('RATO,BOLA', 'RATO,NOVELO', 'Rex,Fofo'));
 7. Clique em "Executar"
 
 
-### 📋 Exemplos de Uso
+**📋 Exemplos de Uso**
 
 - Caso Válido (do desafio)
 ```javascript
@@ -69,24 +84,23 @@ const resultado = abrigo.encontraPessoas('CAIXA,RATO', 'RATO,BOLA', 'Lulu');
 ```
 
 
-### Opção 3: No navegador (HTML)
+### Opção 3: Terminal
 
-Método 1: Live Server (VS Code)
+1. **Abra o terminal**
+2. **Vá para a pasta raiz do projeto:**
+   ```bash
+   cd abrigo-animais
+   ```
 
-1. Abra a pasta do projeto com o deditor VSCode
-2. Instale extensão "Live Server"
-3. Clique com o botão direito no arquivo index.html
-4. Clique em "Open with Live Server"
+3.  **Execute os exemplos:**
+   ```bash
+   npm start
+   ```
 
-Método 2: Serve (Node.js)
-
-Instale o servidor Node via terminal na pasta raiz do projeto
-```bash
-cd abrigo-animais
-npm install -g serve
-serve .
-# Abre automaticamente no navegador
-```
+4. **Execute os testes:**
+   ```bash
+   npm test
+   ```
 
 
 ## 🧪 Executando Testes
