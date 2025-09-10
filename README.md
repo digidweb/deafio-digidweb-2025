@@ -23,6 +23,7 @@ Sistema para organizar adoções de animais baseado em compatibilidade de brinqu
 
 4. **Salve os arquivos:**
    - `package.json` (na pasta raiz abrigo-animais)
+   - `index.html` (na pasta raiz abrigo-animais)
    - `src/abrigo-animais.js` (código principal)
    - `src/exemplo.js` (exemplos)
    - `src/abrigo-animais.test.js` (testes)
@@ -36,6 +37,7 @@ Sistema para organizar adoções de animais baseado em compatibilidade de brinqu
    ```bash
    npm test
    ```
+
 
 ### Opção 2: Console do Navegador
 
@@ -52,22 +54,22 @@ console.log(abrigo.encontraPessoas('RATO,BOLA', 'RATO,NOVELO', 'Rex,Fofo'));
 7. Clique em "Executar"
 
 
-## 📋 Exemplos de Uso
+### 📋 Exemplos de Uso
 
-### Caso Válido (do desafio)
+- Caso Válido (do desafio)
 ```javascript
 const resultado = abrigo.encontraPessoas('RATO,BOLA', 'RATO,NOVELO', 'Rex,Fofo');
 // { lista: ['Fofo - abrigo', 'Rex - pessoa 1'] }
 ```
 
-### Caso Inválido (do desafio)
+- Caso Inválido (do desafio)
 ```javascript
 const resultado = abrigo.encontraPessoas('CAIXA,RATO', 'RATO,BOLA', 'Lulu');
 // { erro: 'Animal inválido' }
 ```
 
 
-### Opção 2: Navegador (HTML)
+### Opção 3: No navegador (HTML)
 
 Método 1: Live Server (VS Code)
 
@@ -86,6 +88,7 @@ serve .
 # Abre automaticamente no navegador
 ```
 
+
 ## 🧪 Executando Testes
 
 Os testes verificam:
@@ -96,6 +99,7 @@ Os testes verificam:
 - ✅ Casos especiais (Loco, gatos, etc.)
 
 Execute: `npm test`
+
 
 
 ## 🛠️ Desenvolvimento
