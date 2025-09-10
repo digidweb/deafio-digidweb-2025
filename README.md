@@ -58,7 +58,7 @@ Em ambos os métodos, acesse pela URL http://127.0.0.1:8000 no seu navegador
 
 1. Abra o navegador
 2. Aperte a tecla F12
-3. Vá para Console
+3. Vá para a aba Console
 4. Cole o código da classe `AbrigoAnimais`
 5. Apague a última linha `export { AbrigoAnimais as AbrigoAnimais };`
 6. Copie e cole o segunte código ao final:
