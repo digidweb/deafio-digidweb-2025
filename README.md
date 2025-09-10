@@ -9,65 +9,48 @@ Sistema para organizar adoções de animais baseado em compatibilidade de brinqu
 1. **Instale o Node.js** (versão 14+ recomendada)
    - Download: https://nodejs.org/
 
-2. **Crie a estrutura de pastas:**
+2. **Crie a estrutura de pastas via terminal:**
    ```bash
    mkdir abrigo-animais
    cd abrigo-animais
    mkdir src
    ```
+3. **Instale o Jest via terminal:**
+   ```bash
+   cd abrigo-animais
+   npm install --save-dev jest
+   ```
 
-3. **Salve os arquivos:**
-   - `package.json` na raiz
+4. **Salve os arquivos:**
+   - `package.json` (na pasta raiz abrigo-animais)
    - `src/abrigo-animais.js` (código principal)
    - `src/exemplo.js` (exemplos)
    - `src/abrigo-animais.test.js` (testes)
 
-4. **Execute os exemplos:**
+5. **Execute os exemplos:**
    ```bash
    npm start
    ```
 
-5. **Execute os testes:**
+6. **Execute os testes:**
    ```bash
    npm test
    ```
 
-### Opção 2: Navegador (HTML)
+### Opção 2: Console do Navegador
 
-Crie um arquivo `index.html`:
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Abrigo Animais</title>
-</head>
-<body>
-    <h1>Abrigo de Animais</h1>
-    <div id="resultado"></div>
-    
-    <script type="module">
-        import { AbrigoAnimais } from './src/abrigo-animais.js';
-        
-        const abrigo = new AbrigoAnimais();
-        const resultado = abrigo.encontraPessoas('RATO,BOLA', 'RATO,NOVELO', 'Rex,Fofo');
-        
-        document.getElementById('resultado').innerHTML = 
-            '<pre>' + JSON.stringify(resultado, null, 2) + '</pre>';
-    </script>
-</body>
-</html>
-```
-
-### Opção 3: Console do Navegador
-
-1. Abra o navegador (F12)
-2. Vá para Console
-3. Cole o código da classe `AbrigoAnimais`
-4. Execute:
+1. Abra o navegador
+2. Aperte a tecla F12
+3. Vá para Console
+4. Cole o código da classe `AbrigoAnimais`
+5. Apague a última linha `export { AbrigoAnimais as AbrigoAnimais };`
+6. Copie e cole o segunte código ao final:
 ```javascript
 const abrigo = new AbrigoAnimais();
 console.log(abrigo.encontraPessoas('RATO,BOLA', 'RATO,NOVELO', 'Rex,Fofo'));
 ```
+7. Clique em "Executar"
+
 
 ## 📋 Exemplos de Uso
 
@@ -83,6 +66,26 @@ const resultado = abrigo.encontraPessoas('CAIXA,RATO', 'RATO,BOLA', 'Lulu');
 // { erro: 'Animal inválido' }
 ```
 
+
+### Opção 2: Navegador (HTML)
+
+Método 1: Live Server (VS Code)
+
+1. Abra a pasta do projeto com o deditor VSCode
+2. Instale extensão "Live Server"
+3. Clique com o botão direito no arquivo index.html
+4. Clique em "Open with Live Server"
+
+Método 2: Serve (Node.js)
+
+Instale o servidor Node via terminal na pasta raiz do projeto
+```bash
+cd abrigo-animais
+npm install -g serve
+serve .
+# Abre automaticamente no navegador
+```
+
 ## 🧪 Executando Testes
 
 Os testes verificam:
@@ -94,29 +97,6 @@ Os testes verificam:
 
 Execute: `npm test`
 
-## 🎯 Animais Disponíveis
-
-| Nome | Tipo | Brinquedos Favoritos |
-|------|------|---------------------|
-| Rex | cão | RATO, BOLA |
-| Mimi | gato | BOLA, LASER |
-| Fofo | gato | BOLA, RATO, LASER |
-| Zero | gato | RATO, BOLA |
-| Bola | cão | CAIXA, NOVELO |
-| Bebe | cão | LASER, RATO, BOLA |
-| Loco | jabuti | SKATE, RATO |
-
-## 🎮 Brinquedos Válidos
-`RATO`, `BOLA`, `LASER`, `CAIXA`, `NOVELO`, `SKATE`
-
-## 📜 Regras de Adoção
-
-1. Animal vai para quem tem todos os brinquedos na ordem desejada
-2. Pode intercalar outros brinquedos, mas ordem deve ser mantida
-3. Gatos não dividem brinquedos
-4. Se ambas pessoas podem adotar, animal fica no abrigo
-5. Máximo 3 animais por pessoa
-6. Loco não se importa com ordem se tiver companhia
 
 ## 🛠️ Desenvolvimento
 
@@ -125,7 +105,6 @@ Para modificar o código, edite `src/abrigo-animais.js` e execute os testes para
 ```bash
 npm test
 ```
-
 
 -------------------------------------------------------------------
 (O desafio)
