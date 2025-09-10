@@ -20,8 +20,8 @@ Sistema para organizar adoções de animais baseado em compatibilidade de brinqu
    ```
 
 4. **Salve os arquivos:**
-   - `package.json` (na pasta raiz abrigo-animais)
-   - `index.html` (na pasta raiz abrigo-animais)
+   - `package.json` (na pasta raiz `abrigo-animais`)
+   - `index.html` (na pasta raiz `abrigo-animais`)
    - `src/abrigo-animais.js` (código principal)
    - `src/exemplo.js` (exemplos)
    - `src/abrigo-animais.test.js` (testes)
