@@ -13,6 +13,7 @@ Sistema para organizar adoções de animais baseado em compatibilidade de brinqu
    cd abrigo-animais
    mkdir src
    ```
+
 3. **Instale o Jest via terminal:**
    ```bash
    cd abrigo-animais
